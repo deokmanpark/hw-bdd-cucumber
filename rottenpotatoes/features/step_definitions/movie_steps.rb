@@ -19,10 +19,6 @@ end
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
-  #body = page.body
-  #e1_index = body.index(e1)
-  #e2_index = body.index(e2)
-  #assert e1_index < e2_index
   page.body.should =~ /#{e1}.*#{e2}/m
   #fail "Unimplemented"
 end
