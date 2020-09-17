@@ -23,7 +23,7 @@ Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #e1_index = body.index(e1)
   #e2_index = body.index(e2)
   #assert e1_index < e2_index
-  assert page.body =~ /#{e1}.*#{e2}/m
+  page.body.should =~ /#{e1}.*#{e2}/m
   #fail "Unimplemented"
 end
 
